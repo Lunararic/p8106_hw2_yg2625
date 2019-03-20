@@ -1,0 +1,25 @@
+---
+title: "p8106_hw2_yg2625"
+author: "Yue Gu"
+date: "March 20, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(caret) # only for plot
+library(splines)
+library(lasso2) # only for data
+library(mgcv)
+library(tidyverse)
+library(ggplot2)
+library(tidyverse)
+```
+
+# Load Data
+```{r}
+concrete = read.csv("./data/concrete.csv") %>% 
+  janitor::clean_names()
+```
+
+
